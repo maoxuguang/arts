@@ -32,7 +32,7 @@
 	!#/bin/bash
 	for i in {1..100}
 	do
-	    ./jfrog rt upload $fileName $artifactoryRepo&
+	    ./jfrog rt upload xxx_$i.xx $artifactoryRepo&
 	done
 	wait
 	```
