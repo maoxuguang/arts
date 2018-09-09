@@ -18,7 +18,25 @@
 						return result
 	```
 	做了第一道题目，准备以后按顺序刷。看了下solution，里面还有用java的hushmap 来做的，因为hashtable的查找效率高，用空间换时间。
-2.  review
+
+2.  review  
+	 [https://blog.heroku.com/in\_deep\_with\_django\_channels\_the\_future\_of\_real\_time\_apps\_in\_django](https://blog.heroku.com/in_deep_with_django_channels_the_future_of_real_time_apps_in_django)  
+	 这篇文章通过一个聊天室的实例，介绍了django channels.  
+	 channels支持多种通信协议，包括websockets, websockets是一种双向的，长连接的通信协议。这个实例中的聊天室正是采用了websockets协议。  
+	 channels就像任务队列，生产者将消息推送给channels, 再被监听这个channel的消费者获取。  
+	这篇文章写的条理清晰，将channel的工作原理和流程介绍的详尽清楚。除了channel layer这个没有详细介绍，一直搞不太懂。
+	   
+3.  tips shell 中并行运行任务  
+	通过&和wait实现。  
+	```bash
+	!#/bin/bash
+	for i in {1..100}
+	do
+	    ./jfrog rt upload $fileName $artifactoryRepo&
+	done
+	wait
+	```
+4. share  
 	 这周看了些django event的文章。  
 	 事情的起因是这样的，我们想在 django 前端某个地方有更新的时候去触发 jenkins job, 但又不想用 django 后台来做，占用资源，于是想让 jenkins 去轮询，又觉得轮询太笨，想用事件来处理，在我们现在的django系统里没有用事件。  
 	 看了下django的signals和channels，signals的事件处理好像也只能放在django的后台来做，不能和其他的应用程序交互。channels貌似可以，支持websocket, django 应该可以通过websocket和其他应用程序交互，但这样的话不也要保持一个websocket的长连接在那里么？还看了下gerrit trigger，也是通过ssh 连接到gerrit的某个端口，gerrit会把事件发往这个端口。看来应用之间的交互底层实现要么就是轮询，要么就是长连接了吧？
