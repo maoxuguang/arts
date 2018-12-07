@@ -48,6 +48,41 @@
    ```
 
 
-2. Tips
+2. review
+
+   https://stackoverflow.com/questions/21047524/how-does-swapping-of-members-in-the-python-tuples-a-b-b-a-work-internally
+
+   算法题目的答案和皓哥的专栏里编程范式的文章都提到了下面这个式子：
+
+   ```python
+   a, b = b, a
+   ```
+
+   想了解原理，看了下爆栈上的解释，python会把赋值等号的右边先存在stack上，然后交换，然后赋值给等号左边。还不是太明白。
+
+3. Tips
 
    yum的priority值越小优先级越高，比如1的优先级最高，99的优先级最低。
+
+4. share python中的生成器(generator)
+
+   前些天参加同事的培训，他讲了生成器，说生成器的优势是速度快，节省内存空间，今天看了下，计算0到10000000的和，速度好像差不了多少，内存空间倒是节省了。在网上查到的某个文章里说运行下面这段代码会卡死，但我运行起来也超快，秒级:
+
+   ```python
+   l = range(100000000)
+   
+       for i in l:
+           pass
+   ```
+
+
+
+   看了下wiki, 生成器可以让函数作为迭代器工作。
+
+   ```
+   Generator functions allow you to declare a function that behaves like an iterator, i.e. it can be used in a for loop.
+   ```
+
+   有两个优势，一个是简化的代码，因为迭代器要有iter和next函数，非常繁琐，而生成器可以非常方便的用简洁的代码构建迭代器。
+
+   另一个优势是性能的提升，因为生成器本质上还是迭代器，而迭代器是惰性计算，用到某个值才会去计算，不会像列表要先把所有的值都加载到内存。
