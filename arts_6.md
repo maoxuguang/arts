@@ -55,7 +55,7 @@
 
    https://stackoverflow.com/questions/32557920/what-are-type-hints-in-python-3-5
 
-   这是上次被报了个bug, 调用对象的方法时对象为空，群里有同学建议用typing.optional，注释类型，这是查到的资料。里面说了三种方式:
+   这是上次被报了个bug, 调用对象的方法时对象为空，群里有同学建议用typing.optional，注释类型，这是查到的资料。里面说了三种方式来辅助做静态检查:
 
    special comments
 
