@@ -75,3 +75,5 @@
 
    主要是这个 -- 的意思，是为了区分branch和file name相同的情况，比如你要更新某个文件A，但你有个branch名字也是A，那加了 -- 后就会更新A这个文件，而不是checkout到A这个分支。
 
+   好像执行之前要先git fetch.
+
