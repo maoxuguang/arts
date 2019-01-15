@@ -75,5 +75,30 @@
 
    主要是这个 -- 的意思，是为了区分branch和file name相同的情况，比如你要更新某个文件A，但你有个branch名字也是A，那加了 -- 后就会更新A这个文件，而不是checkout到A这个分支。
 
-   好像执行之前要先git fetch.
+   执行之前要先git fetch.
+
+4. share 
+
+   得到选中的tab的名字, tab部分的源码
+
+   ```html
+   <nav id="pipeline_nav" class="menubar-fixed" role="navigation" >
+                   <div class="container-fluid">                                
+                           <ul id="pipeline_nav" class="nav navbar-nav pipeline_nav_bar">
+                               <li id="feature_info_li"><a href="/api/featureci/feature/{{feature.feature_id}}">Feature Info</a></li>
+                               {% for data in pipeline_list %}   
+                                   <li id="{{data.template.display_name}}"><a href="/api/featureci/show_pipeline?name={{data.template.display_name}}&id={{data.id}}">{{data.template.display_name}}</a></li>
+                               {% endfor %}
+                           </ul>            
+                   </div>
+               </nav> 
+   ```
+
+   通过jquery的selector和find()实现：
+
+   ```javascript
+   var selected_tab=$('ul#pipeline_nav').find('li.active')[0].id;
+   ```
+
+   find的参数可以是selector, jquery object, 或者element，这里我们用的是selector.
 
