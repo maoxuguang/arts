@@ -2,6 +2,10 @@
 
 2. review
 
+   <https://blog.packagecloud.io/eng/2015/07/20/yum-repository-internals/>
+
+   koji里面，我改了repo里文件的版本号，编包的时候会选更大的版本号，但我改了之后并没有生效，包里还是老的版本。同事说我要重新createrepo，这样配置文件里的版本才能一起改掉，才会用改过的版本。参考了这个文章，重新createrepo，依然没用。最后还是改spec里的版本号才生效的。
+
 3. tips 
 
    用API更新数据库里的记录的时候总是报错：
