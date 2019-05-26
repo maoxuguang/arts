@@ -64,6 +64,14 @@ Django’s template language comes with a wide variety of built-in tags and filt
 
 但因为我没仔细看，拉着扫了下好像没有地方讲怎么让定制的标签生效的，最后还是在别的地方找到的答案。
 
+总结起来就是:
+
+```
+搜索的时候要先弄清楚问题的本质，也可以在搜索的过程中理清楚。
+```
+
+
+
 ​    
 
 
