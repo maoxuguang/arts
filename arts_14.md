@@ -6,11 +6,11 @@ algorithm
 
 2. tips  用wireshark抓包分析
 
-   ![1574233426844](C:\Users\xumao\AppData\Roaming\Typora\typora-user-images\1574233426844.png)
+   ![1574233426844](.\wireshark1.png)
 
-   ![1574233606169](C:\Users\xumao\AppData\Roaming\Typora\typora-user-images\1574233606169.png)
+   ![1574233606169](.\wireshark2.png)
 
-   ![1574233780094](C:\Users\xumao\AppData\Roaming\Typora\typora-user-images\1574233780094.png)
+   ![1574233780094](.\wireshark3.png)
 
 3. share python的try except
 
