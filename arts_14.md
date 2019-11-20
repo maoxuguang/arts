@@ -1,10 +1,18 @@
-1. algorithm
 
-2. review
 
-3. tips
+algorithm
 
-4. share python的try except
+1. review
+
+2. tips  用wireshark抓包分析
+
+   ![1574233426844](C:\Users\xumao\AppData\Roaming\Typora\typora-user-images\1574233426844.png)
+
+   ![1574233606169](C:\Users\xumao\AppData\Roaming\Typora\typora-user-images\1574233606169.png)
+
+   ![1574233780094](C:\Users\xumao\AppData\Roaming\Typora\typora-user-images\1574233780094.png)
+
+3. share python的try except
 
    最近在代码中要用socket接收两条消息，又没办法判断什么时候结束，就用了timeout，于是用到了except。我原来以为except后面跟的是exception的type，还特意打印了exception的type：
 
@@ -45,12 +53,12 @@
 
         ```python
 try:
-    someFunction()
+​    someFunction()
 except socket.timeout:
-    somecode
+​    somecode
 else:
-    raise Exception("some unexpected errors occurred")
-        ```
+​    raise Exception("some unexpected errors occurred")
+​        ```
 
 发现执行结果不对，else并不是处理其他的异常的，而是处理没有异常发生的情况。文档中是这么写的:
 
