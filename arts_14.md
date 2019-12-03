@@ -2,7 +2,19 @@
 
 algorithm
 
-1. review
+1. review re-throw exception in python
+
+   <https://nedbatchelder.com/blog/200711/rethrowing_exceptions_in_python.html>
+
+   我想把捕捉到的异常再原封不动的抛出去，查到了这个，很简单，直接用raise就是"throw the exception last caught"
+
+   ```python
+   try:
+       do_something_dangerous()
+   except:
+       do_something_to_apologize()
+       raise
+   ```
 
 2. tips  用wireshark抓包分析
 
