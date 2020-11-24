@@ -31,3 +31,18 @@
    ```
 
    -F是改变分隔符的。
+
+
+
+   怎样在awk的模式中使用变量进行匹配?
+
+   ```shell
+   component_name_devtool="coco"
+   devtool_target=(\$(awk -v pat=^\$component_name_devtool: -F':' '\$0~pat{print \$2}' ./jenkins-pipeline-build/component-compile/devtoolTarget.txt))
+   ```
+
+   在~的右边可以是//包括起来的常量正则表达式（regexp constant），也可以是动态的正则表达式，awk会计算表达式的值然后进行正则匹配。常量和动态正则表达式的查别是动态的正则表达式会被扫描两次，一次是awk读取的时候，一次是对~左边的内容进行匹配的时候。
+
+   参考awk manual：
+
+   https://www.gnu.org/software/gawk/manual/html_node/Computed-Regexps.html
