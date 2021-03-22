@@ -2,7 +2,15 @@
 
 2. review
 
-3. tips
+   https://stackoverflow.com/questions/42295921/what-is-the-effect-of-noncps-in-a-jenkins-pipeline-script
+
+   https://en.wikipedia.org/wiki/Continuation-passing_style
+
+   jenkins pipeline里用到@NonCPS然后搜了下，看不懂....
+
+3. tips how to create methods in jenkins declarative pipeline?
+
+   just outside pipeline {}
 
 4. share how to get downstream job build number without waiting?
 
