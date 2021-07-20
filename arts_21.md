@@ -2,7 +2,11 @@
 
 2. review
 
-3. tips
+3. tips git rename file
+
+   ```
+   git mv original_file_name new_file_name
+   ```
 
 4. share how to get string list from json file
 

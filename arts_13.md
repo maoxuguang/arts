@@ -32,6 +32,12 @@
    git branch -dr <remote>/<branch> # Shorter
    ```
 
+   delete local branch
+
+   ```bash
+   git branch -d local_branch_name
+   ```
+
 4. share x-step 8i 配置
 
    ```

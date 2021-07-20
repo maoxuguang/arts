@@ -2,7 +2,11 @@
 
 2. review
 
-3. tips
+3. tips get type of groovy var
+
+   ```
+   println obj.getClass()
+   ```
 
 4. share how to read config from json file in jenkins pipeline
 
@@ -24,7 +28,7 @@
    println(data)
    ```
 
-   又报java.io.NotSerializableException的错误。最后改成了另外一个解析类，下面这个样子的:
+   又报java.io.NotSerializableException的错误。最后改成了另外一个解析类，并且加了@NonCPS，下面这个样子的:
 
    ```groovy
    data = jsonParse(readFile("${env.WORKSPACE}/jenkins-pipeline-build/component-compile/env.json"))
