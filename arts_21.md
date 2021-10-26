@@ -2,6 +2,10 @@
 
 2. review
 
+   https://sematext.com/blog/log-analysis-tools/
+
+   介绍log analysis tool，但好像大部分都是收费的。
+
 3. tips git rename file
 
    ```
